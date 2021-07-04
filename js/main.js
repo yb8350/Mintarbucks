@@ -1,19 +1,8 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-const searchAEl = searchEl.querySelector('a');
-
-searchAEl.addEventListener('click', function () {
-  searchEl.setAttribute('style', 'width: 180px;');
-  setTimeout(() => {
-    searchInputEl.style.display = 'inline-block';
-  }, 100)
-  
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
-gsap.to(toTopEl, .2, {x: 100});
+gsap.to(toTopEl, .2, {x: 100
+});
 
 window.addEventListener('scroll', _.throttle(function () {
   if(window.scrollY > 500) {
@@ -129,8 +118,7 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller());
 });
 
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //올해 년도 반환
+
 // _.throttle(함수, 시간) : 정해진 시간에 따라 함수 실행
 // gsap.to(요소, 지속시간, 옵션) : 요소를 지속시간동안 변경, 중간값이 있는 속성만 변화주기 가능;
 
